@@ -8,15 +8,15 @@ import {connectToDB} from '../connectDb'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken';
 
-const JWT_SECRET=process.env.NEXT_APP_JWT_SECRET;
+const JWT_SECRET:any=process.env.NEXT_APP_JWT_SECRET;
 
 type User={
     email:string,password:string
 }
-export const userCheck=async(token:String)=>{
+export const userCheck=async(token:string)=>{
     try{
         connectToDB();
-        const user=jwt.verify(token,JWT_SECRET);
+        const user:any=jwt.verify(token,JWT_SECRET);
         console.log(user,"JWT Token")
         if(user.entity==='doctor'){
             return await doctorModel.findById(user._id);
