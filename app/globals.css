@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Comfortaa:wght@500&family=Inter&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dropresult{
+    display: none;
+}
+.dropdown:hover  .dropresult{
+    display: block;
+}
+.primary-container{
+    @apply py-[10vh] px-[10vw]
+}
+.base-container{
+    @apply py-[15vh] px-[10vw]
+}
+.flx-row{
+    @apply flex-row  items-center flex 
+}
+.flx-col{
+    @apply flex-col  items-center flex 
+}
+.primary-btn{
+    @apply flx-row justify-center rounded-full py-2 text-white text-lg bg-shade2
+}
+.container-center{
+    @apply flx-row justify-center h-screen
+}
+
+
+
+.popup-window{
+    @apply  w-screen h-screen  bg-slate-50 bg-opacity-30 fixed z-30 justify-center items-center flex flex-row top-0 left-0 
+}
