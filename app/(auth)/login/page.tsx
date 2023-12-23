@@ -31,7 +31,7 @@ const SignUp = () => {
       e.preventDefault();
       try{
         setLoading(true);
-        const token=await userLogin({email,password});
+        const token:any=await userLogin({email,password});
         localStorage.setItem('MedicoIn',token);
 
         setLoading(false);
